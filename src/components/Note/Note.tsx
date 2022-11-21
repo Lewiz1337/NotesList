@@ -46,9 +46,10 @@ const Note: React.FC<noteType> = ({ text, title, tags, id }) => {
 
     return (
       <span className={styles.text}>
-        {arr.map((item) => {
+        {arr.map((item, i) => {
           return item[0] === '#' ? (
             <span
+              key={i}
               onClick={() => {
                 onHandleClickTag(item.slice(1));
               }}
@@ -124,21 +125,21 @@ const Note: React.FC<noteType> = ({ text, title, tags, id }) => {
           />
         </>
       )}
-      <div className={styles.tags}>
-        {tags.map((item) => {
+      <ul className={styles.tags}>
+        {tags.map((item, i) => {
           if (!item) return null;
           return (
-            <span
+            <li
               onClick={() => {
                 onHandleClickTag(item);
               }}
-              key={uuid()}
+              key={i}
               className={styles.tag}>
               {item}
-            </span>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </li>
   );
 };

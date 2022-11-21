@@ -14,7 +14,7 @@ const AddNoteForm: React.FC<AddNoteFormType> = ({ setShowAddForm, onAdd }) => {
 
   const onSubmit = (e: any) => {
     e.preventDefault();
-    if (title && text && tags) {
+    if (title && text) {
       onAdd({ title: title, text: text, tags: tags.split(' ') });
       setTitle('');
       setText('');
@@ -47,7 +47,6 @@ const AddNoteForm: React.FC<AddNoteFormType> = ({ setShowAddForm, onAdd }) => {
             setText(e.target.value);
           }}></textarea>
         <input
-          required
           className={styles.input}
           id="tags"
           type="text"
