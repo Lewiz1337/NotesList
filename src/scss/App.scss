@@ -1,0 +1,36 @@
+@import './variables.scss';
+.App {
+  padding: 25px;
+  width: 80%;
+  margin: auto;
+  .addNote {
+    // width: 50%;
+    // margin: auto;
+    background: $primary-light;
+    border: 1px solid $primary-dark;
+    border-radius: 10px;
+    padding: 8px 0 0 20px;
+    margin-bottom: 40px;
+    height: 40px;
+    display: flex;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    img {
+      width: 25px;
+      cursor: pointer;
+      transition-duration: 0.2s;
+      opacity: 0.7;
+      &:hover {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.root {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  list-style-type: none;
+}
+.skeleton {
+  margin: 15px;
+}
